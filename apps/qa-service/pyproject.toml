@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "semantic-book"
+version = "0.1.0"
+description = ""
+authors = ["Doramas Báez Bernal <doramas6@hotmail.com>"]
+readme = "README.md"
+packages = [{include = "semantic_book"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[tool.poetry.scripts]
+start = 'build:start'
+check-typings = 'build:check_typings'
+dev = 'build:dev'
+test = 'build:test'
+test-watch = 'build:test_watch'
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

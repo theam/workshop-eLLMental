@@ -111,6 +111,13 @@ SUPABASE_KEY= # Your Supabase API key
 SUPABASE_TABLE= # The database table used to save the embeddings.
 SUPABASE_FUNCTION= # The database function used to query the embeddings.
 ```
+
+After the configuration is done, we can execute the application using poetry:
+
+1. Make sure [Poetry](https://python-poetry.org/docs/) is installed on your system.
+2. Open a terminal and navigate to the project directory.
+3. Run the following command to install the project dependencies: `poetry install`
+4. To start the project, run the following command: `poetry run start`
 ## Custom application
 
 Once we have confirmed using Postman that the eLLMental services are available (learning and searching), we can proceed to create our application. In this case, we have used Python + Poetry. To create the custom application, follow these subsequent steps:

@@ -1,0 +1,5 @@
+# Semantic Search
+semanticsearch:
+  openAIKey: hello
+  pineconeKey: hello
+  pineconeUrl: hello

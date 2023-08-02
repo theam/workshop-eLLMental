@@ -31,7 +31,9 @@ public class SemanticSearchService {
         semanticSearch = new SemanticSearch(openAIEmbeddingsModel, pineconeVectorStore);
     }
 
-    public CompletableFuture<Unit> learn(SearchInput input) {
+    public CompletableFuture<Unit> learn(String file_path) {
+        BookIngestionService bookIngestionService = new BookIngestionService(file_path);
+        SearchInput input = new SearchInput(bookIngestionService.ProcessBookByCharacters());
         return semanticSearch.learn(input);
     }
 

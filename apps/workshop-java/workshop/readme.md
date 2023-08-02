@@ -10,13 +10,19 @@ the library of eLLMental kotlin.
 ## Table of Contents
 
 - [Prerequisites](#prerequisites)
-- [Quick Start Guide](#quick-start-guide)
 
 ## Prerequisites
 
 1. Please download the project [workshop-eLLMental](https://github.com/theam/workshop-eLLMental.git). If you find that you do not have access to this repository, please feel free to ask us to add you!
 
-2. Ensure you have Java Development Kit (JDK) installed on your local machine. This is needed to run the Kotlin
+   In order to download the project execute the following command: 
+   > git clone https://github.com/theam/workshop-eLLMental.git
+
+2. To ensure a smooth and productive development experience, we highly recommend using IntelliJ IDEA as your primary 
+Integrated Development Environment (IDE) for working with this project. You can download [IntelliJ IDEA](https://www.jetbrains.com/idea/download/?section=mac).
+You can use the free version or introduce the key that it's in our 1password.
+
+3. Ensure you have Java Development Kit (JDK) installed on your local machine. This is needed to run the Kotlin
    compiler. You can download the JDK from
    the [official Oracle website](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html) or install
    it with a package manager of your choice. 
@@ -27,14 +33,3 @@ the library of eLLMental kotlin.
 
 4. Have Gradle installed. You can find the necessary instructions to install Gradle from
    their [official installation guide](https://gradle.org/install/).
-
-## Quick Start Guide
-
-In this guide, you'll have your application based on a semantic search service up and running on your computer. To do this, 
-we will need to have the eLLMental library and create our services to consume this library:
-
-To begin working locally with **eLLMental**, you'll need to clone the repository:
-
-> git clone https://github.com/theam/ellmental.py
-
-After that, we can follow the quick start guide to use the default configuration or create our own configuration. 

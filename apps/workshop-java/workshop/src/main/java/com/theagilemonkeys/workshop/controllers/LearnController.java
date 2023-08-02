@@ -1,6 +1,5 @@
 package com.theagilemonkeys.workshop.controllers;
 
-import com.theagilemonkeys.ellmental.semanticsearch.SearchInput;
 import com.theagilemonkeys.workshop.services.SemanticSearchService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -19,7 +18,7 @@ public class LearnController {
 
     @PostMapping("/learn")
     @ResponseBody
-    public void learn(@RequestBody SearchInput input) {
-        semanticSearchService.learn(input);
+    public void learn(@RequestBody String file_path) {
+        this.semanticSearchService.learn(file_path);
     }
 }

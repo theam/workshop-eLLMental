@@ -7,7 +7,6 @@ import com.theagilemonkeys.ellmental.semanticsearch.SearchOutput;
 import com.theagilemonkeys.ellmental.semanticsearch.SemanticSearch;
 import com.theagilemonkeys.workshop.config.SemanticSearchConfiguration;
 import com.theagilemonkeys.ellmental.vectorstore.pinecone.PineconeVectorStore;
-import com.theagilemonkeys.workshop.utils.CustomContinuation;
 import kotlin.Unit;
 import org.springframework.stereotype.Service;
 
@@ -33,14 +32,10 @@ public class SemanticSearchService {
     }
 
     public CompletableFuture<Unit> learn(SearchInput input) {
-        CompletableFuture<Unit> result = new CompletableFuture<>();
-        semanticSearch.learn(input, new CustomContinuation<>(result));
-        return result;
+        return semanticSearch.learn(input);
     }
 
     public CompletableFuture<SearchOutput> search(String text) {
-        CompletableFuture<SearchOutput> result = new CompletableFuture<>();
-        semanticSearch.search(text, new CustomContinuation<>(result));
-        return result;
+        return semanticSearch.search(text);
     }
 }

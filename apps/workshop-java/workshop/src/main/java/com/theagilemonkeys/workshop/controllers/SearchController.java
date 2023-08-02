@@ -3,10 +3,13 @@ package com.theagilemonkeys.workshop.controllers;
 import com.theagilemonkeys.workshop.services.SemanticSearchService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.theagilemonkeys.ellmental.semanticsearch.SearchOutput;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import java.util.concurrent.CompletableFuture;
 @Controller
 public class SearchController {
     private final SemanticSearchService semanticSearchService;
@@ -16,9 +19,9 @@ public class SearchController {
         this.semanticSearchService = semanticSearchService;
     }
 
-    @PostMapping("/search")
+    @GetMapping("/search")
     @ResponseBody
-    public void search(@RequestBody String query) {
-        this.semanticSearchService.search(query);
+    public CompletableFuture<SearchOutput> search(@RequestParam String query) {
+        return semanticSearchService.search(query);
     }
 }

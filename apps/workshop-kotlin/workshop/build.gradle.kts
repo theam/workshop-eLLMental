@@ -26,14 +26,14 @@ repositories {
 }
 
 dependencies {
-    // eLLMEntal dependencies
+    // eLLMental
     implementation("com.github.theam.ellmental:core:main-SNAPSHOT")
     implementation("com.github.theam.ellmental:semanticsearch:main-SNAPSHOT")
     implementation("com.github.theam.ellmental:vectorstore:main-SNAPSHOT")
     implementation("com.github.theam.ellmental:embeddingsmodel:main-SNAPSHOT")
     implementation("com.aallam.openai:openai-client:3.3.0")
 
-    // Spring Boot dependenciesx
+    // Spring Boot
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.jetbrains.kotlin:kotlin-reflect")

@@ -1,17 +1,19 @@
 package com.theagilemonkeys.workshop.services;
 
+import com.aallam.openai.client.*;
 import com.theagilemonkeys.ellmental.embeddingsmodel.openai.OpenAIEmbeddingsModel;
 import com.theagilemonkeys.ellmental.semanticsearch.SearchInput;
 import com.theagilemonkeys.ellmental.semanticsearch.SearchOutput;
 import com.theagilemonkeys.ellmental.semanticsearch.SemanticSearch;
 import com.theagilemonkeys.workshop.config.SemanticSearchConfiguration;
 import com.theagilemonkeys.ellmental.vectorstore.pinecone.PineconeVectorStore;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.theagilemonkeys.workshop.utils.CustomContinuation;
+import kotlin.Unit;
 import org.springframework.stereotype.Service;
-import static com.theagilemonkeys.ellmental.embeddingsmodel.openai.OpenAIClientKt.OpenAIClient;
 
-import java.util.HashMap;
-import java.util.List;
+import java.util.concurrent.CompletableFuture;
+
+import static com.theagilemonkeys.ellmental.embeddingsmodel.openai.OpenAIClientKt.OpenAIClient;
 
 @Service
 public class SemanticSearchService {
@@ -22,19 +24,25 @@ public class SemanticSearchService {
         String pineconeKey = semanticSearchConfiguration.getPineconeKey();
         String pineconeUrl = semanticSearchConfiguration.getPineconeUrl();
 
-        OpenAIEmbeddingsModel openAIEmbeddingsModel = new OpenAIEmbeddingsModel(OpenAIClient(openAIKey));
+        OpenAI openAI = OpenAIClient(openAIKey);
+        OpenAIEmbeddingsModel openAIEmbeddingsModel = new OpenAIEmbeddingsModel(openAI);
+
         PineconeVectorStore pineconeVectorStore = new PineconeVectorStore(pineconeKey, pineconeUrl);
 
-        this.semanticSearch = new SemanticSearch(openAIEmbeddingsModel, pineconeVectorStore);
+        semanticSearch = new SemanticSearch(openAIEmbeddingsModel, pineconeVectorStore);
     }
 
-    public void learn(String file_path) {
+    public CompletableFuture<Unit> learn(String file_path) {
+        CompletableFuture<Unit> result = new CompletableFuture<>();
         BookIngestionService bookIngestionService = new BookIngestionService(file_path);
         SearchInput input = new SearchInput(bookIngestionService.ProcessBookByCharacters());
-        this.semanticSearch.learn(input);
+        semanticSearch.learn(input, new CustomContinuation<>(result));
+        return result;
     }
 
-    public SearchOutput search(String text) {
-        return this.semanticSearch.search(text);
+    public CompletableFuture<SearchOutput> search(String text) {
+        CompletableFuture<SearchOutput> result = new CompletableFuture<>();
+        semanticSearch.search(text, new CustomContinuation<>(result));
+        return result;
     }
 }

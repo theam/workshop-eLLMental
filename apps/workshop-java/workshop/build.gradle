@@ -31,10 +31,10 @@ allprojects {
 
 dependencies {
     // eLLMental
-    implementation "com.github.theam.ellmental:core:main-SNAPSHOT"
-    implementation "com.github.theam.ellmental:semanticsearch:main-SNAPSHOT"
-    implementation "com.github.theam.ellmental:vectorstore:main-SNAPSHOT"
-    implementation "com.github.theam.ellmental:embeddingsmodel:main-SNAPSHOT"
+    implementation "com.github.theam.ellmental:core:suspend-functions-workaround-SNAPSHOT"
+    implementation "com.github.theam.ellmental:semanticsearch:suspend-functions-workaround-SNAPSHOT"
+    implementation "com.github.theam.ellmental:vectorstore:suspend-functions-workaround-SNAPSHOT"
+    implementation "com.github.theam.ellmental:embeddingsmodel:suspend-functions-workaround-SNAPSHOT"
     implementation "com.aallam.openai:openai-client:3.3.0"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3"
 

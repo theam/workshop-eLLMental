@@ -19,8 +19,13 @@ configurations {
 
 repositories {
     mavenCentral()
-    maven {
-        url "https://jitpack.io"
+}
+
+allprojects {
+    repositories {
+        maven {
+            url "https://jitpack.io"
+        }
     }
 }
 
@@ -31,6 +36,7 @@ dependencies {
     implementation "com.github.theam.ellmental:vectorstore:main-SNAPSHOT"
     implementation "com.github.theam.ellmental:embeddingsmodel:main-SNAPSHOT"
     implementation "com.aallam.openai:openai-client:3.3.0"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3"
 
     // Spring Boot
     implementation 'org.springframework.boot:spring-boot-starter-web'

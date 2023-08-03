@@ -1,65 +1,49 @@
 <!-- omit in toc -->
 # eLLMental workshop
-<!-- omit in toc -->
-## Description
 
-This workshop will teach us how to quickly create an application, which is based on semantic search as the core, using 
-the library of eLLMental kotlin.
+This workshop will teach you how to quickly create an basic semantic search application, using the using SpringBoot and eLLMental.
 
 <!-- omit in toc -->
 ## Table of Contents
 
 - [Prerequisites](#prerequisites)
 - [Quick Start Guide](#quick-start-guide)
-  - [Step 0: Open the application project](#step-0-open-the-application-project)
-  - [Step 1: Configure the enviromental variables](#step-1-configure-the-enviromental-variables)
+  - [Step 0: Clone the project](#step-0-clone-the-project)
+  - [Step 1: Set up your development environment](#step-1-set-up-your-development-environment)
   - [Step 2: Understanding the structure of the project](#step-2-understanding-the-structure-of-the-project)
-  - [Step 3: Complete the functionalities](#step-3-complete-the-functionalities)
-  - [Step 4: Ingest the documentation](#step-4-ingest-the-documentation)
-- [How to test the application?](#how-to-test-the-application)
+  - [Step 3: Setting up the development environment](#step-3-setting-up-the-development-environment)
+  - [Step 4: Running the project](#step-4-running-the-project)
+  - [Step 5: Complete the functionalities](#step-5-complete-the-functionalities)
+  - [Step 6: Ingest the documentation](#step-6-ingest-the-documentation)
+- [Testing the Application](#testing-the-application)
 
 ## Prerequisites
 
-1. Please download the project [workshop-eLLMental](https://github.com/theam/workshop-eLLMental.git). If you find that you do not have access to this repository, please feel free to ask us to add you!
+Before starting, make sure you have the following prerequisites:
 
-   In order to download the project execute the following command: 
-   > git clone https://github.com/theam/workshop-eLLMental.git
+1. Integrated Development Environment (IDE) - We recommend using IntelliJ IDEA as your IDE for this project. You can download the Community Edition from [IntelliJ IDEA](https://www.jetbrains.com/idea/download/?section=mac).
 
-2. To ensure a smooth and productive development experience, we highly recommend using IntelliJ IDEA as your primary 
-Integrated Development Environment (IDE) for working with this project. You can download it from [IntelliJ IDEA](https://www.jetbrains.com/idea/download/?section=mac).
-You can use the free trial version or introduce the key that it's in our 1password.
+2. Java Development Kit (JDK) version 8 or above installed on your machine. If not, you can download it [using IntelliJ](https://www.jetbrains.com/help/idea/sdk.html#change-project-sdk), or from the official website [Oracle JDK](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html).
+
+3. Git - Make sure you have Git installed on your machine. You can download it from the official website: [Git](https://git-scm.com/downloads).
 
 ## Quick Start Guide
 
-In this guide, you'll have your application based on a semantic search service up and running on your computer. 
-To do this, we will need to have the eLLMental kotlin library and complete the template functions provided in the kata_template branch to consume this library. 
+Follow the steps below to set up and build the Semantic Search service.
 
-For this reason, the repository will contain two branches (we will explain how to switch branches soon):
+### Step 0: Clone the project
 
-- Result: this branch will contain the result of the kata (the application working).
-- kata_template: This branch will contain the code template that we will use to starting working. 
+1. Clone the project repository from [GitHub](https://github.com/theam/workshop-eLLMental.git) using the command:
 
-### Step 0: Open the application project
+```shell
+git clone https://github.com/theam/workshop-eLLMental.git
+```
 
-In the repository, you can find two projects: `workshop-java` and `workshop-kotlin`. Both projects are the same, with one containing the necessary workarounds for the library in java and the other one integrating the Kotlin library. You are free to choose the preferred version.
+### Step 1: Set up your development environment
 
-If you're using IntelliJ IDEA, you can follow the steps below:
-
-1. Open IntelliJ IDEA and click on File `Open`.
-2. Select the version preferred. For example, open workshop-java project inside workshop-eLLMental.
-3. If everything is correct, you will see something like the following image. 
-4. Switch to the kata_template branch. You can execute the following command in the terminal: `git checkout kata_template`. Alternatively, if you're using an IDE, you'll find a button in the bottom right corner of the screen.
-
-<img src="resources/intellij_project_open.png" alt="Intellij project open" width="250"/>
-
-### Step 1: Configure the enviromental variables
-
-The environment variables, are dynamic values that can affect the behavior of software applications or the operating system. They provide a way to configure and control various aspects of an application's behavior without making direct changes to the code. Environmental variables are crucial for maintaining flexibility and security, enabling an application to adapt to different environments and scenarios.
-
-We need to configure the enviromental variables before starting making changes to the code. You can modify the variables in the following file "workshop-java/src/main/resources/application.yml,". In addition, you can find the API keys in our [1password](https://start.1password.com/open/i?a=Z7M3NNFDB5FWNDINTDJPDR6MI4&v=gohapx2edta6xazhcluyply6ku&i=xzh3u7o5zfgkvecmccd6dsuu2q&h=theagilemonkeys.1password.com).
-
-
-**IMPORTANT NOTE: The variable namespace should be unique for each individual. In this case, we suggest using your first name and your last name.**
+1. Open IntelliJ IDEA and click on `File -> Open`.
+2. Navigate to the cloned project directory and select either `workshop-java` or `workshop-kotlin` project based on your preferred language.
+3. Once the project is opened, switch to the `main` branch. You can use the terminal with the command `git checkout main` or find the button in the IDE's interface.
 
 ### Step 2: Understanding the structure of the project
 
@@ -89,31 +73,94 @@ This project make use of the eLLMental library for making semantic search and us
     │   ├── settings.gradle                                                      
     │   └── ...                                                                  
     └── workshop-kotlin
+  
+The project structure contains the following components:
 
-### Step 3: Complete the functionalities
+- `src/main/java/com/theagilemonkeys/workshop`: This package contains the main application code.
+  - `WorkshopApplication.java`: The entry point of the SpringBoot application.
+  - `config`: This package contains the configuration for environmental variables.
+  - `controllers`: Contains the SpringBoot controllers for handling HTTP requests.
+  - `services`: Contains the Semantic Search service implementation.
 
-In order to use the functionalities provided by eLLMental, we will need to use the SemanticSearch library. Below are the functionalities that we need to create:
+- `src/main/resources`: This folder contains the application configuration files.
+  - `application.yml`: A configuration file for setting up environmental variables.
+  - `The Pragmatic Programmer - Dave Thomas, Andy Hunt.txt`: Sample documentation file.
 
-In the `SemanticSearchService` we need to get the enviromental variables. In addition, we need to create the necessary components to use the SemanticSearch library. This includes: the OpenAI client, the OpenAIEmbeddingsModel, the PineconeVectorStore and using that components we can create the SemanticSearch service. You can find more details in the documentation: [Getting started](https://kotlin.ellmental.com/getting_started)
+### Step 3: Setting up the development environment
 
-The `learn` function is responsible for processing and sending chunks into the vector database for learning purposes (creating embeddings). Before consume this function  you need use the appropriate function to divides the book into smaller chunks for processing it.
+Before you start making changes to the code, you need to configure the application variables necessary for the Semantic Search service to work. Follow the steps below:
 
-On the other hand, the `search` function allows you to perform embedding retrieval from the database. This function expects to recieve the user's question.
+1. Open the `application.yml` file located in the `workshop-java/src/main/resources/` directory.
 
-Furthermore, we will develop HTTP services with SpringBoot to interact with the backend. This allows you to seamlessly integrate eLLMental's robust semantic search and learning capabilities into your applications and leverage its advanced natural language processing functionalities.
+2. Modify the application variables with the values provided in our [1password](https://start.1password.com/open/i?a=Z7M3NNFDB5FWNDINTDJPDR6MI4&v=gohapx2edta6xazhcluyply6ku&i=xzh3u7o5zfgkvecmccd6dsuu2q&h=theagilemonkeys.1password.com).
 
-### Step 4: Ingest the documentation
+3. **Make sure to use a unique value for `pineconeNamespace`.** For example, we suggest you use your first and last name, like `YOUR_FIRST_NAME_YOUR_LAST_NAME`. But you are more than welcome to be creative and have fun :stuck_out_tongue_closed_eyes:.
 
-Since eLLMental currently only receives processed embeddings, we need to process the documentation first. In this kata, we have provided a basic function that divides the book into smaller chunks to fit the context window of the embedding model. For simplicity, we adopt a straightforward 
-approach in this example, dividing the text into chunks of 1000 characters each. However, it's important to note that **more sophisticated methods are available**, and **utilizing them can significantly enhance the performance of semantic search**.
+> [!WARNING]
+> The unique value for `pineconeNamespace` is important to avoid conflicts with other developers in the workshop.
 
-Once the documentation is divided into chunks, we can employ the "learn" function of SemanticSearch to generate embeddings for each chunk. These embeddings represent the semantic meaning of the text and serve as the foundation for efficient searching and matching of queries.
+1. Save the changes to the `application.yml` file.
 
-After generating the embeddings, we store them locally in Chroma (or another solution like pinecone), a vector storage solution. This ensures that the processed documentation is readily accessible for future searches and analysis, eliminating the need to repeatedly process the original text.
+### Step 4: Running the project
 
-Remember, while we used a simple approach to process the documentation in this example, more advanced methods can be applied to achieve even better results in real-world scenarios.
+To run the Semantic Search service, follow these steps:
 
-## How to test the application?
+1. Open IntelliJ IDEA.
+
+2. Open the project by clicking on `File -> Open` and navigate to the cloned project directory.
+
+3. In the project structure, go to `src/main/java/com/theagilemonkeys/workshop` and open the `WorkshopApplication.java` file.
+
+4. Right-click on the `WorkshopApplication` class and select `Run 'WorkshopApplication'`.
+
+   Alternatively, you can click on the green play button next to the `WorkshopApplication` class.
+
+5. The application will start running locally on your machine.
+
+Now you have set up your development environment and run the Semantic Search service.
+
+### Step 5: Complete the functionalities
+
+To use the eLLMental library for semantic search, you need to complete the following functionalities in the `SemanticSearchService`:
+
+1. Get the application variables: Modify the `SemanticSearchService` to retrieve the application variables mentioned in the `application.yml` file.
+
+2. Create necessary components: Initialize the OpenAI client, OpenAIEmbeddingsModel, and PineconeVectorStore to use the eLLMental library for semantic search. Refer to the [Getting Started](https://kotlin.ellmental.com/getting_started) documentation for more details.
+
+3. Implement the `learn` function: This function processes and sends chunks of text to the vector database for learning purposes (creating embeddings). Before consuming this function, divide the text into smaller chunks using the appropriate function.
+
+4. Implement the `search` function: This function performs embedding retrieval from the database based on user's input question.
+
+Once the `SemanticSearchService` is fully implemented, you will also need to connect the code to the corresponding controllers. 
+
+### Step 6: Ingest the documentation
+
+Since vector stores only accept processed embeddings, you need to process the documentation before using the search service. In the example provided, the documentation is divided into smaller chunks of 1000 characters each. However, you can use more advanced methods for better performance.
+
+1. Use the provided function in the kata to divide the documentation into smaller chunks.
+
+2. Use the `learn` function in the `SemanticSearchService` to generate embeddings for each chunk.
+
+3. Store the generated embeddings in a vector storage solution like Chroma.
+
+> [!NOTE]
+> In real-world scenarios, more advanced methods can be applied to process the documentation and achieve better results.
+
+## Testing the Application
+
+To test the Semantic Search service, we will use Swagger. 
+
+1. Make sure the application is running locally on your machine.
+
+2. Open a web browser and enter the following URL: [http://localhost:8080/docs](http://localhost:8080/docs).
+
+3. Swagger will generate interactive and user-friendly documentation from the API code annotations, allowing you to explore and interact with the API endpoints effectively.
+
+4. Use the Swagger UI to test various API endpoints and verify the functionality of the Semantic Search service.
+
+Now you have successfully built and tested the Semantic Search service using SpringBoot. You can further enhance the functionality or integrate it into your own applications as needed.
+
+Happy coding!
 
 In order to test the application, we will use swagger. Swagger simplifies the documentation and testing of APIs by generating interactive and user-friendly documentation from API code annotations. It helps developers and users understand, explore, and interact with APIs more effectively.
 

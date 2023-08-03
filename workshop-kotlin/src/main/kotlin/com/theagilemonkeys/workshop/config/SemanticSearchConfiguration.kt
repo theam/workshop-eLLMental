@@ -6,7 +6,12 @@ import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 
 @ConfigurationProperties(prefix = "semanticsearch")
-data class SemanticSearchConfiguration(var openaiKey: String = "", var pineconeKey: String = "", var pineconeUrl: String = "")
+data class SemanticSearchConfiguration(
+    var openaiKey: String = "",
+    var pineconeKey: String = "",
+    var pineconeUrl: String = "",
+    var pineconeNamespace: String = ""
+)
 
 @Configuration
 @EnableConfigurationProperties(SemanticSearchConfiguration::class)

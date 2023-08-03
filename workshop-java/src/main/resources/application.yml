@@ -3,3 +3,4 @@ semanticsearch:
   openAIKey: hello
   pineconeKey: hello
   pineconeUrl: hello
+  namespace: hello

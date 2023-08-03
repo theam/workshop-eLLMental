@@ -30,7 +30,6 @@ public class LearnController {
     @PostMapping("/learn")
     @ResponseBody
     public CompletableFuture<Unit> learn(@RequestBody LearnRequest file_path) {
-
-        return semanticSearchService.learn(file_path.getFile_path());
+        // implement the search functionality using the semanticSearchService
     }
 }

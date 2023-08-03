@@ -23,21 +23,19 @@ public class SemanticSearchService {
         String pineconeKey = semanticSearchConfiguration.getPineconeKey();
         String pineconeUrl = semanticSearchConfiguration.getPineconeUrl();
 
-        OpenAI openAI = OpenAIClient(openAIKey);
-        OpenAIEmbeddingsModel openAIEmbeddingsModel = new OpenAIEmbeddingsModel(openAI);
+        OpenAI openAI = //TODO: Build an OpenAI client;
+        OpenAIEmbeddingsModel openAIEmbeddingsModel = //TODO: Create OpenAIEmbeddingsModel;
 
-        PineconeVectorStore pineconeVectorStore = new PineconeVectorStore(pineconeKey, pineconeUrl);
+        PineconeVectorStore pineconeVectorStore = //TODO: Create ChromaVectorStore or PineconeVectorStore;
 
-        semanticSearch = new SemanticSearch(openAIEmbeddingsModel, pineconeVectorStore);
+        semanticSearch = //TODO: Create SemanticSearch;
     }
 
     public CompletableFuture<Unit> learn(String file_path) {
-        BookIngestionService bookIngestionService = new BookIngestionService(file_path);
-        SearchInput input = new SearchInput(bookIngestionService.ProcessBookByCharacters());
-        return semanticSearch.learn(input);
+        //TODO: Implement method
     }
 
     public CompletableFuture<SearchOutput> search(String text) {
-        return semanticSearch.search(text);
+        //TODO: Implement method
     }
 }

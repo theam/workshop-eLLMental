@@ -22,6 +22,6 @@ public class SearchController {
     @GetMapping("/search")
     @ResponseBody
     public CompletableFuture<SearchOutput> search(@RequestParam String query) {
-        return semanticSearchService.search(query);
+        // implement the search functionality using the semanticSearchService
     }
 }

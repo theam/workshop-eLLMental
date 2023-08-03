@@ -11,9 +11,9 @@ the library of eLLMental kotlin.
 
 - [Prerequisites](#prerequisites)
 - [Quick Start Guide](#quick-start-guide)
-  - [Step 0: Open the application project.](#step-0-open-the-application-project)
-  - [Step 1: Configure the enviromental variables.](#step-1-configure-the-enviromental-variables)
-  - [Step 2: Understanding the structure of the project.](#step-2-understanding-the-structure-of-the-project)
+  - [Step 0: Open the application project](#step-0-open-the-application-project)
+  - [Step 1: Configure the enviromental variables](#step-1-configure-the-enviromental-variables)
+  - [Step 2: Understanding the structure of the project](#step-2-understanding-the-structure-of-the-project)
   - [Step 3: Complete the functionalities](#step-3-complete-the-functionalities)
   - [Step 4: Ingest the documentation](#step-4-ingest-the-documentation)
 - [How to test the application?](#how-to-test-the-application)
@@ -32,19 +32,27 @@ You can use the free trial version or introduce the key that it's in our 1passwo
 ## Quick Start Guide
 
 In this guide, you'll have your application based on a semantic search service up and running on your computer. 
-To do this, we will need to have the eLLMental kotlin library and complete the template functions that we have provided to consume this library. 
+To do this, we will need to have the eLLMental kotlin library and complete the template functions provided in the kata_template branch to consume this library. 
 
-### Step 0: Open the java application project.
+For this reason, the repository will contain two branches (we will explain how to switch branches soon):
+
+- Result: this branch will contain the result of the kata (the application working).
+- kata_template: This branch will contain the code template that we will use to starting working. 
+
+### Step 0: Open the application project
+
+In the repository, you can find two projects: `workshop-java` and `workshop-kotlin`. Both projects are the same, with one containing the necessary workarounds for the library in java and the other one integrating the Kotlin library. You are free to choose the preferred version.
 
 If you're using IntelliJ IDEA, you can follow the steps below:
 
 1. Open IntelliJ IDEA and click on File `Open`.
-2. Select the workshop-java project inside workshop-eLLMental.
+2. Select the version preferred. For example, open workshop-java project inside workshop-eLLMental.
 3. If everything is correct, you will see something like the following image. 
+4. Switch to the kata_template branch. You can execute the following command in the terminal: `git checkout kata_template`. Alternatively, if you're using an IDE, you'll find a button in the bottom right corner of the screen.
 
 <img src="resources/intellij_project_open.png" alt="Intellij project open" width="250"/>
 
-### Step 1: Configure the enviromental variables.
+### Step 1: Configure the enviromental variables
 
 The environment variables, are dynamic values that can affect the behavior of software applications or the operating system. They provide a way to configure and control various aspects of an application's behavior without making direct changes to the code. Environmental variables are crucial for maintaining flexibility and security, enabling an application to adapt to different environments and scenarios.
 
@@ -53,9 +61,11 @@ We need to configure the enviromental variables before starting making changes t
 
 **IMPORTANT NOTE: The variable namespace should be unique for each individual. In this case, we suggest using your first name and your last name.**
 
-### Step 2: Understanding the structure of the project.
+### Step 2: Understanding the structure of the project
 
-This project is a webserver 
+The following example is the strcuture of the workshop-java project.
+
+This project make use of the eLLMental library for making semantic search and use springboot for create services to consume this application. 
 
     .
     ├── resources               
@@ -84,6 +94,8 @@ This project is a webserver
 
 In order to use the functionalities provided by eLLMental, we will need to use the SemanticSearch library. Below are the functionalities that we need to create:
 
+In the `SemanticSearchService` we need to get the enviromental variables. In addition, we need to create the necessary components to use the SemanticSearch library. This includes: the OpenAI client, the OpenAIEmbeddingsModel, the PineconeVectorStore and using that components we can create the SemanticSearch service. You can find more details in the documentation: [Getting started](https://kotlin.ellmental.com/getting_started)
+
 The `learn` function is responsible for processing and sending chunks into the vector database for learning purposes (creating embeddings). Before consume this function  you need use the appropriate function to divides the book into smaller chunks for processing it.
 
 On the other hand, the `search` function allows you to perform embedding retrieval from the database. This function expects to recieve the user's question.
@@ -103,3 +115,6 @@ Remember, while we used a simple approach to process the documentation in this e
 
 ## How to test the application?
 
+In order to test the application, we will use swagger. Swagger simplifies the documentation and testing of APIs by generating interactive and user-friendly documentation from API code annotations. It helps developers and users understand, explore, and interact with APIs more effectively.
+
+In order to execute swagger, we need to go to the following link[Documentation](http://localhost:8080/docs).

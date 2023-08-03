@@ -9,6 +9,7 @@ public class SemanticSearchConfiguration {
     private String openaiKey;
     private String pineconeKey;
     private String pineconeUrl;
+    private String pineconeNamespace;
 
     public String getOpenaiKey() {
         return openaiKey;
@@ -32,5 +33,13 @@ public class SemanticSearchConfiguration {
 
     public void setPineconeUrl(String pineconeUrl) {
         this.pineconeUrl = pineconeUrl;
+    }
+
+    public String getPineconeNamespace() {
+        return pineconeNamespace;
+    }
+
+    public void setPineconeNamespace(String pineconeNamespace) {
+        this.pineconeNamespace = pineconeNamespace;
     }
 }

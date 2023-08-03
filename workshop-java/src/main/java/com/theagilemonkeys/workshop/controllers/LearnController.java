@@ -30,6 +30,7 @@ public class LearnController {
     @PostMapping("/learn")
     @ResponseBody
     public CompletableFuture<Unit> learn(@RequestBody LearnRequest file_path) {
-        // implement the search functionality using the semanticSearchService
+        // TODO: implement the search functionality using the SemanticSearchService
+        throw new UnsupportedOperationException("TODO");
     }
 }

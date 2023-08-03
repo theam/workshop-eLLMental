@@ -3,10 +3,10 @@ package com.theagilemonkeys.workshop.controllers;
 import com.theagilemonkeys.workshop.services.SemanticSearchService;
 import kotlin.Unit;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -18,7 +18,8 @@ class LearnRequest {
     }
 
 }
-@Controller
+
+@RestController
 public class LearnController {
     private final SemanticSearchService semanticSearchService;
 

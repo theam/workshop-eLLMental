@@ -4,3 +4,8 @@ semanticsearch:
   pineconeKey: hello
   pineconeUrl: hello
   namespace: hello
+
+# Swagger
+springdoc:
+  swagger-ui:
+    path: /docs

@@ -3,9 +3,16 @@ semanticsearch:
   openAIKey: hello
   pineconeKey: hello
   pineconeUrl: hello
-  namespace: hello
+  pineconeNamespace: hello
 
 # Swagger
 springdoc:
   swagger-ui:
     path: /docs
+
+# SpringBoot
+spring:
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB

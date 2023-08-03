@@ -1,23 +1,19 @@
 package com.theagilemonkeys.workshop.controllers;
 
 import com.theagilemonkeys.workshop.services.SemanticSearchService;
+import com.theagilemonkeys.workshop.utils.StringSegmentationUtils;
 import kotlin.Unit;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
+import java.util.List;
 import java.util.concurrent.CompletableFuture;
-
-class LearnRequest {
-    private String file_path;
-
-    public String getFile_path() {
-        return file_path;
-    }
-
-}
 
 @RestController
 public class LearnController {
@@ -28,10 +24,12 @@ public class LearnController {
         this.semanticSearchService = semanticSearchService;
     }
 
-    @PostMapping("/learn")
+    @PostMapping(value = "/learn", consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
     @ResponseBody
-    public CompletableFuture<Unit> learn(@RequestBody LearnRequest file_path) {
+    public CompletableFuture<Unit> learn(@RequestParam MultipartFile file) throws IOException {
         // TODO: implement the search functionality using the SemanticSearchService
+        String fileContent = new String(file.getBytes());
+        List<String> chunks = StringSegmentationUtils.segmentByCharacters(fileContent, 1000);
         throw new UnsupportedOperationException("TODO");
     }
 }

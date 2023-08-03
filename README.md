@@ -115,6 +115,12 @@ Remember, while we used a simple approach to process the documentation in this e
 
 ## How to test the application?
 
-In order to test the application, we will use swagger. Swagger simplifies the documentation and testing of APIs by generating interactive and user-friendly documentation from API code annotations. It helps developers and users understand, explore, and interact with APIs more effectively.
+In order to test the application, we will utilize Swagger, which streamlines API documentation and testing by creating interactive and user-friendly documentation through API code annotations. It helps developers and users understand, explore, and interact with APIs more effectively.
 
-In order to execute swagger, we need to go to the following link[Documentation](http://localhost:8080/docs).
+To execute Swagger, navigate to the following link: [Documentation](http://localhost:8080/docs). The interface will resemble the following:
+
+<img src="resources/swagger.png" alt="Intellij project open" width="750"/>
+
+You can verify the functionality by clicking on the "Learn" service and selecting the `Try it out` button. This will allow you to upload a file and execute the learn routine.
+
+<img src="resources/swagger_try.png" alt="Intellij project open" width="750"/>

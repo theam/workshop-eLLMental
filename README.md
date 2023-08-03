@@ -1,5 +1,5 @@
 <!-- omit in toc -->
-# eLLMental Kotlin - Java workshop - Kotlin workshop
+# eLLMental workshop
 <!-- omit in toc -->
 ## Description
 

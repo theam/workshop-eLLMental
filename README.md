@@ -11,7 +11,7 @@ the library of eLLMental kotlin.
 
 - [Prerequisites](#prerequisites)
 - [Quick Start Guide](#quick-start-guide)
-  - [Step 0: Open the java application project.](#step-0-open-the-java-application-project)
+  - [Step 0: Open the application project.](#step-0-open-the-application-project)
   - [Step 1: Configure the enviromental variables.](#step-1-configure-the-enviromental-variables)
   - [Step 2: Understanding the structure of the project.](#step-2-understanding-the-structure-of-the-project)
   - [Step 3: Complete the functionalities](#step-3-complete-the-functionalities)

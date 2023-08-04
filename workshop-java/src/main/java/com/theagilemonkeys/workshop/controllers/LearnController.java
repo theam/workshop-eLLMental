@@ -27,9 +27,8 @@ public class LearnController {
     @PostMapping(value = "/learn", consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
     @ResponseBody
     public CompletableFuture<Unit> learn(@RequestParam MultipartFile file) throws IOException {
-        // TODO: implement the search functionality using the SemanticSearchService
         String fileContent = new String(file.getBytes());
         List<String> chunks = StringSegmentationUtils.segmentByCharacters(fileContent, 2000);
-        throw new UnsupportedOperationException("TODO");
+        return semanticSearchService.learn(chunks);
     }
 }

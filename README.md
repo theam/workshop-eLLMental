@@ -1,9 +1,11 @@
 <!-- omit in toc -->
+
 # eLLMental workshop
 
 This workshop will teach you how to quickly create an basic semantic search application, using the using SpringBoot and eLLMental.
 
 <!-- omit in toc -->
+
 ## Table of Contents
 
 - [Prerequisites](#prerequisites)
@@ -49,13 +51,13 @@ git clone https://github.com/theam/workshop-eLLMental.git
 
 The following example is the strcuture of the workshop-java project.
 
-This project make use of the eLLMental library for making semantic search and use springboot for create services to consume this application. 
+This project make use of the eLLMental library for making semantic search and use springboot for create services to consume this application.
 
     .
-    ├── resources               
+    ├── resources
     ├── workshop-java                                        # Project template for java workshop
-    │   ├── src 
-    |   |   ├── main 
+    │   ├── src
+    |   |   ├── main
     |   |   |    ├── java/com/theagilemonkeys/workshop
     |   |   |    |    ├── WorkshopApplication.java           # File used to execute the springboot application with IntelliJJ
     |   |   |    |    ├── config                             # Routine that gets the enviromental variables
@@ -66,17 +68,18 @@ This project make use of the eLLMental library for making semantic search and us
     |   |   |    |    |    └── ....
     |   |   |    └── resources
     |   |   |    |   |── application.yml                              # File to configure the enviromental variables
-    |   |   |    |   └── The Pragmatic Programmer  - Dave Thomas, Andy Hunt.txt
-    |   |   └──    test                                                          
-    │   ├── grade                                                               
-    │   ├── .gitignore                                                         
-    │   ├── settings.gradle                                                      
-    │   └── ...                                                                  
+    |   |   |    |   └── The Pragmatic Programmer  - Chapters 1 to 4.txt
+    |   |   └──    test
+    │   ├── grade
+    │   ├── .gitignore
+    │   ├── settings.gradle
+    │   └── ...
     └── workshop-kotlin
-  
+
 The project structure contains the following components:
 
 - `src/main/java/com/theagilemonkeys/workshop`: This package contains the main application code.
+
   - `WorkshopApplication.java`: The entry point of the SpringBoot application.
   - `config`: This package contains the configuration for environmental variables.
   - `controllers`: Contains the SpringBoot controllers for handling HTTP requests.
@@ -84,7 +87,7 @@ The project structure contains the following components:
 
 - `src/main/resources`: This folder contains the application configuration files.
   - `application.yml`: A configuration file for setting up environmental variables.
-  - `The Pragmatic Programmer - Dave Thomas, Andy Hunt.txt`: Sample documentation file.
+  - `The Pragmatic Programmer - Chapters 1 to 4.txt`: Sample file to be ingested.
 
 ### Step 3: Setting up the development environment
 
@@ -131,17 +134,17 @@ To use the eLLMental library for semantic search, you need to complete the follo
 
 4. Implement the `search` function: This function performs embedding retrieval from the database based on user's input question.
 
-Once the `SemanticSearchService` is fully implemented, you will also need to connect the code to the corresponding controllers. 
+Once the `SemanticSearchService` is fully implemented, you will also need to connect the code to the corresponding controllers.
 
 ### Step 6: Ingest the documentation
 
-Since vector stores only accept processed embeddings, you need to process the documentation before using the search service. In the example provided, the documentation is divided into smaller chunks of 1000 characters each. However, you can use more advanced methods for better performance.
+Since vector stores only accept processed embeddings, you need to process the documentation before using the search service. The documentation to be processsed is a portion of the beloved Pragmatic Programmer. You can find it in `src/main/resources/The Pragmatic Programmer - Chapters 1 to 4.txt`. You are provided with an utility function that splits the documentation into smaller chunks of 2000 characters each. However, you can use more advanced methods for better performance.
 
 1. Use the provided function in the kata to divide the documentation into smaller chunks.
 
 2. Use the `learn` function in the `SemanticSearchService` to generate embeddings for each chunk.
 
-3. Store the generated embeddings in a vector storage solution like Chroma.
+3. Store the generated embeddings in a vector storage solution like Pinecone.
 
 > [!NOTE]
 > In real-world scenarios, more advanced methods can be applied to process the documentation and achieve better results.

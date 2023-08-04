@@ -21,7 +21,7 @@ public class SearchController {
 
     @GetMapping("/search")
     @ResponseBody
-    public CompletableFuture<SearchOutput> search(@RequestParam String query) {
+    public CompletableFuture<SearchOutput> search(@RequestParam String query, @RequestParam(defaultValue = "10") int itemsLimit) {
         // TODO: implement the search functionality using the SemanticSearchService
         throw new UnsupportedOperationException("TODO");
     }

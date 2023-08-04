@@ -6,6 +6,7 @@ import com.theagilemonkeys.workshop.config.SemanticSearchConfiguration;
 import kotlin.Unit;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 @Service
@@ -16,12 +17,12 @@ public class SemanticSearchService {
         // TODO: Add eLLMental SemanticSearch component
     }
 
-    public CompletableFuture<Unit> learn(String file_path) {
+    public CompletableFuture<Unit> learn(List<String> chunks) {
         // TODO: Implement method
         throw new UnsupportedOperationException("TODO");
     }
 
-    public CompletableFuture<SearchOutput> search(String text) {
+    public CompletableFuture<SearchOutput> search(String text, int itemsLimit) {
         // TODO: Implement method
         throw new UnsupportedOperationException("TODO");
     }

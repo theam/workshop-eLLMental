@@ -11,8 +11,6 @@ import org.springframework.web.bind.annotation.RestController
 @RestController
 class SearchController(@Autowired private val semanticSearchService: SemanticSearchService) {
     @GetMapping("/search")
-    suspend fun search(@RequestParam query: String, @RequestParam(defaultValue = "10") itemsLimit: Int = 10): SearchOutput {
-        // TODO: implement the search functionality using the SemanticSearchService
-        throw UnsupportedOperationException("Not implemented")
-    }
+    suspend fun search(@RequestParam query: String, @RequestParam(defaultValue = "10") itemsLimit: Int = 10) =
+        semanticSearchService.search(query, itemsLimit)
 }

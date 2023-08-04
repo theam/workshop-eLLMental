@@ -1,5 +1,6 @@
 package com.theagilemonkeys.workshop.controllers
 
+import com.theagilemonkeys.ellmental.semanticsearch.LearnInput
 import com.theagilemonkeys.workshop.services.SemanticSearchService
 import com.theagilemonkeys.workshop.utils.segmentByCharacters
 import org.springframework.beans.factory.annotation.Autowired
@@ -16,6 +17,6 @@ class LearnController(@Autowired private val semanticSearchService: SemanticSear
     suspend fun learn(@RequestParam("file") file: MultipartFile) =
         file.inputStream.readAllBytes().toString(Charsets.UTF_8).let { text ->
             val segments = text.segmentByCharacters()
-            // TODO: implement the search functionality using the SemanticSearchService
+            semanticSearchService.learn(LearnInput(segments))
         }
 }

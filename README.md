@@ -66,7 +66,7 @@ This project make use of the eLLMental library for making semantic search and us
     |   |   |    |    |    └── ....
     |   |   |    └── resources
     |   |   |    |   |── application.yml                              # File to configure the enviromental variables
-    |   |   |    |   └── The Pragmatic Programmer  - Dave Thomas, Andy Hunt.txt
+    |   |   |    |   └── The Pragmatic Programmer  - Chapters 1 to 4.txt
     |   |   └──    test                                                          
     │   ├── grade                                                               
     │   ├── .gitignore                                                         
@@ -84,7 +84,7 @@ The project structure contains the following components:
 
 - `src/main/resources`: This folder contains the application configuration files.
   - `application.yml`: A configuration file for setting up environmental variables.
-  - `The Pragmatic Programmer - Dave Thomas, Andy Hunt.txt`: Sample documentation file.
+  - `The Pragmatic Programmer - Chapters 1 to 4.txt`: Sample file to be ingested.
 
 ### Step 3: Setting up the development environment
 
@@ -135,13 +135,13 @@ Once the `SemanticSearchService` is fully implemented, you will also need to con
 
 ### Step 6: Ingest the documentation
 
-Since vector stores only accept processed embeddings, you need to process the documentation before using the search service. In the example provided, the documentation is divided into smaller chunks of 1000 characters each. However, you can use more advanced methods for better performance.
+Since vector stores only accept processed embeddings, you need to process the documentation before using the search service. The documentation to be processsed is a portion of the beloved Pragmatic Programmer. You can find it in `src/main/resources/The Pragmatic Programmer - Chapters 1 to 4.txt`. You are provided with an utility function that splits the documentation into smaller chunks of 1000 characters each. However, you can use more advanced methods for better performance.
 
 1. Use the provided function in the kata to divide the documentation into smaller chunks.
 
 2. Use the `learn` function in the `SemanticSearchService` to generate embeddings for each chunk.
 
-3. Store the generated embeddings in a vector storage solution like Chroma.
+3. Store the generated embeddings in a vector storage solution like Pinecone.
 
 > [!NOTE]
 > In real-world scenarios, more advanced methods can be applied to process the documentation and achieve better results.

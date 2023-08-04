@@ -29,7 +29,7 @@ public class LearnController {
     public CompletableFuture<Unit> learn(@RequestParam MultipartFile file) throws IOException {
         // TODO: implement the search functionality using the SemanticSearchService
         String fileContent = new String(file.getBytes());
-        List<String> chunks = StringSegmentationUtils.segmentByCharacters(fileContent, 1000);
+        List<String> chunks = StringSegmentationUtils.segmentByCharacters(fileContent, 2000);
         throw new UnsupportedOperationException("TODO");
     }
 }

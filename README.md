@@ -23,7 +23,7 @@ Before starting, make sure you have the following prerequisites:
 
 1. Integrated Development Environment (IDE) - We recommend using IntelliJ IDEA as your IDE for this project. You can download the Community Edition from [IntelliJ IDEA](https://www.jetbrains.com/idea/download/?section=mac).
 
-2. Java Development Kit (JDK) version 8 or above installed on your machine. If not, you can download it [using IntelliJ](https://www.jetbrains.com/help/idea/sdk.html#change-project-sdk), or from the official website [Oracle JDK](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html).
+2. Java Development Kit (JDK) version 17 on your machine. If not, you can download it [using IntelliJ](https://www.jetbrains.com/help/idea/sdk.html#change-project-sdk), or from the official website [Oracle JDK 17](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html).
 
 3. Git - Make sure you have Git installed on your machine. You can download it from the official website: [Git](https://git-scm.com/downloads).
 

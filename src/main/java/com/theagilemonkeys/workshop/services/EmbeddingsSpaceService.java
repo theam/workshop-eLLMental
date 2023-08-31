@@ -2,7 +2,7 @@ package com.theagilemonkeys.workshop.services;
 
 import com.theagilemonkeys.ellmental.semanticsearch.SearchOutput;
 import com.theagilemonkeys.ellmental.semanticsearch.SemanticSearch;
-import com.theagilemonkeys.workshop.config.SemanticSearchConfiguration;
+import com.theagilemonkeys.workshop.config.EmbeddingsSpaceConfiguration;
 import kotlin.Unit;
 import org.springframework.stereotype.Service;
 
@@ -10,19 +10,19 @@ import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 @Service
-public class SemanticSearchService {
-    private SemanticSearch semanticSearch;
+public class EmbeddingsSpaceService {
+    private EmbeddingsSpaceComponent embeddingsSpace;
 
-    public SemanticSearchService(SemanticSearchConfiguration semanticSearchConfiguration) {
+    public EmbeddingsSpaceService(EmbeddingsSpaceConfiguration configuration) {
         // TODO: Add eLLMental SemanticSearch component
     }
 
-    public CompletableFuture<Unit> learn(List<String> chunks) {
+    public CompletableFuture<Unit> save(String text) {
         // TODO: Implement method
         throw new UnsupportedOperationException("TODO");
     }
 
-    public CompletableFuture<SearchOutput> search(String text, int itemsLimit) {
+    public CompletableFuture<List<Embedding>> search(String text, int itemsLimit) {
         // TODO: Implement method
         throw new UnsupportedOperationException("TODO");
     }

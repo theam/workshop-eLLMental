@@ -1,7 +1,7 @@
 package com.theagilemonkeys.workshop.services;
 
-import com.theagilemonkeys.ellmental.semanticsearch.SearchOutput;
-import com.theagilemonkeys.ellmental.semanticsearch.SemanticSearch;
+import com.theagilemonkeys.ellmental.core.schema.Embedding;
+import com.theagilemonkeys.ellmental.embeddingsspace.EmbeddingsSpaceComponent;
 import com.theagilemonkeys.workshop.config.EmbeddingsSpaceConfiguration;
 import kotlin.Unit;
 import org.springframework.stereotype.Service;

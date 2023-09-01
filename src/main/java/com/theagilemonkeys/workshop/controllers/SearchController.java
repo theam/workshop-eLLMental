@@ -1,6 +1,5 @@
 package com.theagilemonkeys.workshop.controllers;
 
-import com.theagilemonkeys.ellmental.semanticsearch.SearchOutput;
 import com.theagilemonkeys.workshop.services.EmbeddingsSpaceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

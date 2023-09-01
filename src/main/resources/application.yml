@@ -1,5 +1,5 @@
 # Semantic Search
-semanticsearch:
+embeddingsspace:
   openAIKey: hello
   pineconeKey: hello
   pineconeUrl: hello

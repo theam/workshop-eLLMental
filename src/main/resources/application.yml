@@ -1,0 +1,21 @@
+# Semantic Search
+embeddingsspace:
+  openAIKey: hello
+  pineconeKey: hello
+  pineconeUrl: hello
+  pineconeNamespace: hello
+
+# Swagger
+springdoc:
+  swagger-ui:
+    path: /docs
+
+# SpringBoot
+spring:
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+  mvc:
+    async:
+      request-timeout: -1

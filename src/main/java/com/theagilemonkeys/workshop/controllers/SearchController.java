@@ -23,8 +23,7 @@ public class SearchController {
     @GetMapping("/search")
     @ResponseBody
     public List<Embedding> search(@RequestParam String query, @RequestParam(defaultValue = "10") int itemsLimit) {
-        System.out.println("Searching for: " + query);
-        // TODO: implement the search functionality using the SemanticSearchService
+        // TODO: implement the search functionality using the EmbeddingsSpaceService
         throw new UnsupportedOperationException("TODO");
     }
 }

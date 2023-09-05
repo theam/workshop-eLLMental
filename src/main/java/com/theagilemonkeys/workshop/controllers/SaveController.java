@@ -24,8 +24,7 @@ public class SaveController {
 
     @PostMapping(value = "/save")
     @ResponseBody
-    public void learn(@RequestBody SaveRequest request) throws IOException {
-        System.out.println("Saving text: " + request.text());
+    public void save(@RequestBody SaveRequest request) throws IOException {
         // TODO: implement the search functionality using the SemanticSearchService
         throw new UnsupportedOperationException("TODO");
     }

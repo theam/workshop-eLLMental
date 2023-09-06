@@ -16,17 +16,17 @@ public class EmbeddingsSpaceService {
     private final EmbeddingsSpaceComponent embeddingsSpace;
 
     public EmbeddingsSpaceService(EmbeddingsSpaceConfiguration configuration) {
-        // TODO: Add eLLMental SemanticSearch component
+        this.embeddingsSpace = new EmbeddingsSpaceComponent(
+            new OpenAIEmbeddingsModel(configuration.getOpenaiKey()),
+            new PineconeEmbeddingsStore(configuration.getPineconeUrl(), configuration.getPineconeKey(), configuration.getPineconeNamespace())
+        );
     }
 
     public Embedding save(String text) {
-        // TODO: Implement method
-        throw new UnsupportedOperationException("TODO");
+        return this.embeddingsSpace.save(text);
     }
 
-    // TODO: Score is not returned
     public List<Embedding> search(String text, int itemsLimit) {
-        // TODO: Implement method
-        throw new UnsupportedOperationException("TODO");
+        return this.embeddingsSpace.mostSimilarEmbeddings(text, itemsLimit);
     }
 }

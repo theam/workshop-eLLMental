@@ -25,7 +25,6 @@ public class SaveController {
     @PostMapping(value = "/save")
     @ResponseBody
     public void save(@RequestBody SaveRequest request) throws IOException {
-        // TODO: implement the search functionality using the EmbeddingsSpaceService
-        throw new UnsupportedOperationException("TODO");
+        this.embeddingsSpaceService.save(request.text());
     }
 }

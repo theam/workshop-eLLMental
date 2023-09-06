@@ -301,7 +301,22 @@ We have provided a Postman collection that you can use to try the backend you ju
 We can go ahead and save some notes, we have pre-created them for you so you don't have to think. But feel free to get inspired by the ones we provided
 and add your own too!
 
-`TODO: Create the postman collection with predefined notes`
+For this, we will be using the Postman Runner feature, which allows you to run a collection of requests in a loop.
+
+Click on the Runner button in the bottom right corner of Postman:
+
+![Postman runner](./.assets/runner-button.png)
+
+Once you opened this window, drag the `Add Note` request to the `Run Order` section. **Make sure that the `search` request is not checked**:
+
+![drag and drop the request](./.assets/drag-runner.png)
+
+Now, in the right-most panel click on `Select File` and select the `notes.csv` file that you can find in the root of the project:
+
+![select file](./.assets/select-file.png)
+
+Now, go ahead and click on `Run Workshop eLLMental`, it will save 20 notes of different topics.
+
 
 ### Searching for similar notes
 
@@ -309,7 +324,9 @@ If you go ahead and use the `search` request, you can play with the `query` para
 
 Note how the search results are related by their **meaning** rather than the text similarity.
 
-`TODO: Create the postman collection with predefined search requests`
+![similar notes](./.assets/similar-notes.png)
+
+Tip: You can collapse the fields of the response, like `vector` by clicking on the line number on the left of it.
 
 ### BONUS: Experimenting with the frontend
 

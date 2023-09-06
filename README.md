@@ -274,7 +274,7 @@ public class SearchController {
 }
 ```
 
-The `search` endpoint will use the `EmbeddingsSpaceService` class to search the query from the request, limiting by the `itemsLimit` parameter:
+The `search` endpoint will use the `EmbeddingsSpaceService` class to search the query from the request, limiting the number of embeddings to be returned by the `itemsLimit` parameter:
 
 ```java
 @GetMapping("/search")

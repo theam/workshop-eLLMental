@@ -53,7 +53,7 @@ You can check which JDK version you have installed by running java -version (tha
 
 ## 🌲 Get a Pinecone account
 
-For the workshop we will be using Pinecone. Don't worry, it is completely free to use.
+We will be using Pinecone in the workshop. Don't worry, it is completely free to use.
 
 Create a Pinecone account and save it for the workshop, we will be using it during the development process in the workshop.
 

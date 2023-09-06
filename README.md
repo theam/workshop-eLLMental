@@ -17,21 +17,6 @@ You'll learn about Large Language Models (LLMs) and Embeddings, what's the hype 
 **Yes!** You will need to prepare the following things:
 
 
-## 🐙 Have a GitHub account
-
-The workshop template with starting material is going to be downloaded from GitHub. It is important that you have a [**GitHub**](http://www.github.com) account and know [**how to fork a repo](https://docs.github.com/en/get-started/quickstart/fork-a-repo).**
-
-
-## 🌳 Ensure Git is installed and configured
-
-To interact with GitHub, we will use Git. To install it:
-- On Windows: `winget install --id Git.Git -e --source winget`
-- On MacOS: `brew install git`
-- On Ubuntu: `sudo apt install git`
-
-Make sure that you're able to clone repos with git. Try running the following command: `git clone https://github.com/theam/eLLMental`.
-
-
 ## 💻  Get IntelliJ IDEA
 
 Both community edition and ultimate work. Get the IntelliJ IDEA app from the official website.
@@ -85,9 +70,9 @@ If all is correct, you should see the following file structure (only showing the
 └── 📄 settings.gradle
 ```
 
-## 📚 Creating a Pinecone Collection
+## 📚 Creating a Pinecone Index
 
-For the app to work, we will need to set up a Pinecone Collection:
+For the app to work, we will need to set up a Pinecone Index:
 
 1. Begin by logging into your Pinecone account. 
    - Create a new project called "Workshop"
@@ -336,4 +321,5 @@ Remember that the embeddings we're using have 1536 dimensions, so this is a redu
 
 Here ends the workshop, we hope that you learned your way through the usage of embeddings in Java and Spring Boot.
 
-We invite you to join the [eLLMental Discord](https://discord.gg/34cBbvjjAx) and ask any questions that you have, we will be more than happy to answer all of them!
+We invite you to join the [eLLMental Discord](https://discord.gg/34cBbvjjAx), share your impressions of this workshop, your experiences integrating embeddings in your own applications, or asking any questions you may have. There you'll find a small but welcoming community of passionate people who will be more than willing to help and support you in your AI journey!
+

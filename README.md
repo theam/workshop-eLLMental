@@ -291,8 +291,7 @@ We have provided a Postman collection that you can use to try the backend you ju
 
 ### Saving some notes
 
-We can go ahead and save some notes, we have pre-created them for you so you don't have to think. But feel free to get inspired by the ones we provided
-and add your own too!
+We can go ahead and save some notes. You'll find a set of examples ready to be submitted in the postman collection, but feel free to edit them or create new ones.
 
 For this, we will be using the Postman Runner feature, which allows you to run a collection of requests in a loop.
 

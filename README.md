@@ -340,5 +340,4 @@ Remember that the embeddings we're using have 1536 dimensions, so this is a redu
 
 Here ends the workshop, we hope that you learned your way through the usage of embeddings in Java and Spring Boot.
 
-We invite you to join the [eLLMental Discord](https://discord.gg/34cBbvjjAx) and ask any questions that you have, we will be more than happy to
-answer all of them!
+We invite you to join the [eLLMental Discord](https://discord.gg/34cBbvjjAx) and ask any questions that you have, we will be more than happy to answer all of them!

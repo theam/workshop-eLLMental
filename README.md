@@ -47,7 +47,7 @@ If you're more comfortable with another IDE, do so at your own risk. We don't ha
 
 ## ☕  Install Java JDK17
 
-The IntelliJ IDEA app should help you downloading it. An alternative is to use SDKMAN. (After installing SDKMAN just run sdk install java and it should install JDK17 by default)
+The IntelliJ IDEA app should help you download it. An alternative is to use SDKMAN. (After installing SDKMAN just run `sdk install java` and it should install JDK17 by default)
 
 You can check which JDK version you have installed by running java -version (that's a single `-`)
 

@@ -63,7 +63,7 @@ Create a Pinecone account and save it for the workshop, we will be using it duri
 
 ## Open the project with IntelliJ IDEA
 
-Once you got the code, begin by opening the project using IntelliJ IDEA.
+Once you get the code, begin by opening the project using IntelliJ IDEA.
 
 If all correct, you should see the following file structure (only showing the relevant files):
 

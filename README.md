@@ -330,8 +330,7 @@ Tip: You can collapse the fields of the response, like `vector` by clicking on t
 
 ### BONUS: Experimenting with the frontend
 
-We've prepared a frontend for the application too, so you can not only try saving and searching for notes, but also seeing an approximate of how the
-embeddings look like in the embeddings space.
+We've prepared a frontend for the application too, so you can not only try saving and searching for notes, but also have an approximate visual representation of the embeddings space.
 
 Remember that the embeddings we're using have 1536 dimensions, so this is a reduction to 2 dimensions so we, as humans, can understand an approximate of how it looks like.
 

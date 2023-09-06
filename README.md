@@ -17,13 +17,6 @@ You'll learn about Large Language Models (LLMs) and Embeddings, what's the hype 
 **Yes!** You will need to prepare the following things:
 
 
-## 🧹 Dust off your Java skills
-
-Although **we won't be doing anything advanced in terms of Java**, it is recommended that you have its syntax fresh. It is important that you are familiar with basic stuff like function calls, class definition, constructors, reading text from the console, as well as printing it.
-
-If you are unsure what's the best way of refreshing this, we recommend you try the [**Exercism Java track**](https://exercism.org/tracks/java).
-
-
 ## 🐙 Have a GitHub account
 
 The workshop template with starting material is going to be downloaded from GitHub. It is important that you have a [**GitHub**](http://www.github.com) account and know [**how to fork a repo](https://docs.github.com/en/get-started/quickstart/fork-a-repo).**

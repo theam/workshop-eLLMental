@@ -15,7 +15,6 @@ import java.util.concurrent.CompletableFuture;
 public class SearchController {
     private final EmbeddingsSpaceService embeddingsSpaceService;
 
-    @Autowired
     public SearchController(EmbeddingsSpaceService embeddingsSpaceService) {
         this.embeddingsSpaceService = embeddingsSpaceService;
     }

@@ -17,7 +17,6 @@ public class SaveController {
 
     private final EmbeddingsSpaceService embeddingsSpaceService;
 
-    @Autowired
     public SaveController(EmbeddingsSpaceService embeddingsSpaceService) {
         this.embeddingsSpaceService = embeddingsSpaceService;
     }

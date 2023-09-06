@@ -312,9 +312,13 @@ Now, go ahead and click on `Run Workshop eLLMental`, it will save 20 notes of di
 
 ### Searching for similar notes
 
-If you go ahead and use the `search` request, you can play with the `query` parameter to experiment with the results.
+Go ahead and use the `search` request. You can play with the `query` parameter to experiment with the results.
 
-Note how the search results are related by their **meaning** rather than the text similarity.
+Notice how the search results are related to the **meaning** of your query and not specific word matches. Try synonyms or rephrase the expressions to see how they affect the search results and the score associated to each result.
+
+There are some details worth noting to correctly interpret and use the similarity search results:
+1. The score is a relative measure of similarity for the current query that ranges from zero (no similarity detected) to one (perfect match), but it's very unlikely that even a result that matches exactly the query or its opposite yields a perfect zero or one, so interpretations of this measure should be taken with a grain of salt. Scores are useful to compare results from the same query, but it should not be taken as an absolute similarity measure, it's by no means the "semantic distance" between the reference text and the result. 
+2. The database is comparing the reference text from the query to every single embedding in the database, so even opposite results may appear among the results. The database is trying to sort its contents in order of similarity and will try to do that even if the database contains no related content. You may want to filter results that are under a certain score, but the right threshold will depend on your use case. This is a parameter you may want to make configurable in a production system and try different values until you find an acceptable one.
 
 ![similar notes](./.assets/similar-notes.png)
 

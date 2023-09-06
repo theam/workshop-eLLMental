@@ -94,7 +94,7 @@ If all is correct, you should see the following file structure (only showing the
 
 ## 📚 Creating a Pinecone Collection
 
-For the app to work, we will need to setup a Pinecone Collection:
+For the app to work, we will need to set up a Pinecone Collection:
 
 1. Begin by logging into your Pinecone account. 
    - Create a new project called "Workshop"

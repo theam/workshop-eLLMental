@@ -215,7 +215,7 @@ public List<Embedding> search(String text, int itemsLimit) {
 }
 ```
 
-## 💾 Solving the Save controller class
+## 💾 Solving the `SaveController` class
 
 Under the `controllers` folder, we can find the `SaveController` class, which looks like so:
 

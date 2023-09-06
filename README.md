@@ -251,7 +251,7 @@ public void save(@RequestBody SaveRequest request) throws IOException {
 }
 ```
 
-## 🔍 Solving the Search controller class
+## 🔍 Solving the `SearchController` class
 
 Under the same folder as before, you will find the `SearchController` class, which looks like so:
 

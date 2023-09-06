@@ -128,7 +128,7 @@ In the Pinecone tab that you have open, copy the URL from the index information 
 
 ### Pinecone Namespace
 
-This can be set to anything you want, it is a mean of partitioning data under your index. We will use `workshop` as the namespace.
+This can be set to anything you want, it is a way of partitioning data under your index. We will use `workshop` as the namespace.
 
 ### Pinecone API Key
 

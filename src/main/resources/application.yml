@@ -19,3 +19,8 @@ spring:
   mvc:
     async:
       request-timeout: -1
+server:
+  error:
+    include-exception: true
+    include-stacktrace: always
+    include-message: always

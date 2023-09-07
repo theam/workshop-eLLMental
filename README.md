@@ -167,7 +167,7 @@ The constructor of the service class should look like this now:
 ```java
 public EmbeddingsSpaceService(EmbeddingsSpaceConfiguration configuration) {
     var openAIModel = new OpenAIEmbeddingsModel(configuration.getOpenaiKey());
-    var pineconeStore = new PineconeEmbeddingsStore(configuration.getPineconeKey(), configuration.getPineconeUrl(), configuration.getPineconeNamespace());
+    var pineconeStore = new PineconeEmbeddingsStore(configuration.getPineconeUrl(), configuration.getPineconeKey(), configuration.getPineconeNamespace());
     this.embeddingsSpace = new EmbeddingsSpaceComponent(openAIModel, pineconeStore);
 }
 ```

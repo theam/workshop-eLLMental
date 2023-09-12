@@ -41,8 +41,8 @@ We will be using Pinecone in the workshop. Don't worry, it is completely free to
 ### 📚 Creating a Pinecone Index
 
 1. Begin by logging into the Pinecone account we just created
-   - Create a new project called "Workshop"
-   - If not, follow the New Project wizard and name the new project "Workshop"
+   - Create a new project called "Workshop" (if you have a "Starter" project created, delete it)
+   - Follow the New Project wizard and name the new project "Workshop"
    - Use the **Las Vegas** - `us-west4-gcp-free` environment
 2. Open the Indexes page and click on Create Index
    ![Create Index](./.assets/create-index-1.png)

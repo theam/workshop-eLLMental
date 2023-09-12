@@ -312,11 +312,12 @@ Tip: You can collapse the fields of the response, like `vector` by clicking on t
 
 ### BONUS: Experimenting with the frontend
 
-We've prepared a frontend for the application too, so you can not only try saving and searching for notes, but also have an approximate visual representation of the embeddings space.
+To use this application front end, just open the `index.html` file with your favorite browser and set the URL (set by default to `localhost:8080`) where the backend is running
 
-Remember that the embeddings we're using have 1536 dimensions, so this is a reduction to 2 dimensions so we, as humans, can understand an approximate of how it looks like.
+![main page](./.assets/main-page.png)
 
-`TODO: Add screenshot of the app`
+![create a note](./.assets/create-note-form.png)
+
 
 # 🎁 It's a wrap!
 

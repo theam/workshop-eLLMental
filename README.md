@@ -14,7 +14,10 @@ You'll learn about Large Language Models (LLMs) and Embeddings, what's the hype 
 
 # Do I have to bring something prepared?
 
-**Yes!** You will need to prepare the following things:
+**Yes!** You will need to prepare a couple of things but, don't worry! We prepared this awesome README to give you 
+all the instructions you need :smile:
+
+**Note:** For an ideal experience, we recommend the use of two monitors.
 
 
 ## 💻  Get IntelliJ IDEA
@@ -25,19 +28,35 @@ If you're more comfortable with another IDE, do so at your own risk. We don't ha
 
 ## ☕  Install Java JDK17
 
-The IntelliJ IDEA app should help you download it. An alternative is to use SDKMAN. (After installing SDKMAN just run `sdk install java` and it should install JDK17 by default)
+The IntelliJ IDEA app should help you download it. An alternative is to use [SDKMAN](https://sdkman.io/). (After installing SDKMAN just run `sdk install java` and it should install JDK17 by default)
 
 You can check which JDK version you have installed by running java -version (that's a single `-`)
 
-## 🌲 Get a Pinecone account
+## 🌲 Setting up Pinecone
 
-We will be using Pinecone in the workshop. Don't worry, it is completely free to use.
+We will be using Pinecone in the workshop. Don't worry, it is completely free to use, and we just need to:
+1. Create a [Pinecone](https://www.pinecone.io/) account, which we will use during the workshop
+2. Create a Pinecone Index (instructions below)
 
-Create a Pinecone account and save it for the workshop, we will be using it during the development process in the workshop.
+### 📚 Creating a Pinecone Index
 
-|<h1>Getting our hands dirty!</h1>Begin by getting the code of this repo. You can either do it by cloning it or by downloading it as a [zip file](https://github.com/theam/workshop-eLLMental/archive/refs/heads/main.zip).|<img src="./.assets/robot-laptop.jpeg" width="350px" alt="illustration of a robot using a laptop" />|
+1. Begin by logging into the Pinecone account we just created
+   - Create a new project called "Workshop" (if you have a "Starter" project created, delete it)
+   - Follow the New Project wizard and name the new project "Workshop"
+   - Use the **Las Vegas** - `us-west4-gcp-free` environment
+2. Open the Indexes page and click on Create Index
+   ![Create Index](./.assets/create-index-1.png)
+3. Fill the form as follows:
+   - **Name**: `workshop`
+   - Configure your Index -> **Dimensions**: `1536`
+   - **Metric**: `cosine`
+   - Leave the rest as it is, click on **Create**.
+
+Don't close the tab yet, you will need it later on for the workshop.
+
+
+|<h1>Getting our hands dirty!</h1>Begin by for the wgetting the code of this repo. You can either do it by cloning it or by downloading it as a [zip file](https://github.com/theam/workshop-eLLMental/archive/refs/heads/main.zip).|<img src="./.assets/robot-laptop.jpeg" width="350px" alt="illustration of a robot using a laptop" />|
 |-----|----|
-
 
 ## Open the project with IntelliJ IDEA
 
@@ -69,24 +88,6 @@ If all is correct, you should see the following file structure (only showing the
 ├── 📄 README.md
 └── 📄 settings.gradle
 ```
-
-## 📚 Creating a Pinecone Index
-
-For the app to work, we will need to set up a Pinecone Index:
-
-1. Begin by logging into your Pinecone account. 
-   - Create a new project called "Workshop"
-   - If not, follow the New Project wizard and name the new project "Workshop"
-   - Use the **Las Vegas** - `us-west4-gcp-free` environment
-2. Open the Indexes page and click on Create Index
-   ![Create Index](./.assets/create-index-1.png)
-3. Fill the form as follows:
-   - **Name**: `workshop`
-   - Configure your Index -> **Dimensions**: `1536`
-   - **Metric**: `cosine`
-   - Leave the rest as it is, click on **Create**.
-
-Don't close the tab yet, you will need it for the next step.
 
 ## 🔧 Setting up the application configuration
 

@@ -3,7 +3,7 @@ embeddingsspace:
   openAIKey: hello
   pineconeKey: hello
   pineconeUrl: hello
-  pineconeNamespace: hello
+  pineconeNamespace: workshop
 
 # Swagger
 springdoc:

@@ -7,8 +7,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.io.IOException;
-
 @RestController
 public class SaveController {
 
@@ -23,7 +21,7 @@ public class SaveController {
     @PostMapping(value = "/save")
     @CrossOrigin
     @ResponseBody
-    public void save(@RequestBody SaveRequest request) throws IOException {
+    public void save(@RequestBody SaveRequest request) {
         // TODO: implement the search functionality using the SemanticSearchService
         throw new UnsupportedOperationException("TODO");
     }

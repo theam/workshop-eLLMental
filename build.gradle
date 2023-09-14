@@ -21,20 +21,12 @@ repositories {
     mavenCentral()
 }
 
-allprojects {
-    repositories {
-        maven {
-            url "https://jitpack.io"
-        }
-    }
-}
-
 dependencies {
     // eLLMental
-    implementation "com.github.theam.ellmental:core:main-SNAPSHOT"
-    implementation "com.github.theam.ellmental:embeddingsgeneration:main-SNAPSHOT"
-    implementation "com.github.theam.ellmental:embeddingsstore:main-SNAPSHOT"
-    implementation "com.github.theam.ellmental:embeddingsspace:main-SNAPSHOT"
+    implementation "com.theagilemonkeys.ellmental:core:0.0.2"
+    implementation "com.theagilemonkeys.ellmental:embeddingsgeneration:0.0.2"
+    implementation "com.theagilemonkeys.ellmental:embeddingsstore:0.0.2"
+    implementation "com.theagilemonkeys.ellmental:embeddingsspace:0.0.2"
     implementation "com.aallam.openai:openai-client:3.3.0"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3"
 

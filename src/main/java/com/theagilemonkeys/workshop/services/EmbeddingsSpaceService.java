@@ -20,7 +20,6 @@ public class EmbeddingsSpaceService {
         throw new UnsupportedOperationException("TODO");
     }
 
-    // TODO: Score is not returned
     public List<Embedding> search(String text, int itemsLimit) {
         // TODO: Implement method
         throw new UnsupportedOperationException("TODO");
